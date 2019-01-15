@@ -1,4 +1,4 @@
-# Copyright (c) 2012-2018 LG Electronics, Inc.
+# Copyright (c) 2012-2019 LG Electronics, Inc.
 
 # Place distro-wide PREFERRED_PROVIDER settings here. Place MACHINE-specific
 # settings (always with a _<MACHINE> override) in <MACHINE>.conf with a default
@@ -12,8 +12,8 @@ PNBLACKLIST[webruntime] ?= "${@oe.utils.conditional('PREFERRED_PROVIDER_virtual/
 VIRTUAL-RUNTIME_webruntime[vardeps] += "PREFERRED_PROVIDER_virtual/webruntime"
 VIRTUAL-RUNTIME_webruntime ?= "${@oe.utils.conditional('PREFERRED_PROVIDER_virtual/webruntime', 'webruntime', 'webruntime', 'chromium53', d)}"
 
-PREFERRED_PROVIDER_bash = "busybox"
-VIRTUAL-RUNTIME_bash = "busybox"
+PREFERRED_PROVIDER_bash = "bash"
+VIRTUAL-RUNTIME_bash = "bash"
 
 # Prefer libjpeg-turbo from meta-oe as it provides SIMD optimizations
 PREFERRED_PROVIDER_jpeg = "libjpeg-turbo"

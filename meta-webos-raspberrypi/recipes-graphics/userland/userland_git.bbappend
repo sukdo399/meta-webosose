@@ -1,6 +1,6 @@
-# Copyright (c) 2017 LG Electronics, Inc.
+# Copyright (c) 2017-2019 LG Electronics, Inc.
 
-EXTENDPRAUTO_append = "webosrpi3"
+EXTENDPRAUTO_append = "webosrpi4"
 
 PROVIDES_remove = "\
     virtual/libgles2 \
@@ -31,9 +31,5 @@ SRC_URI_remove = "\
 
 FILESEXTRAPATHS_prepend := "${THISDIR}/files:"
 SRC_URI_append = " file://0001-Remove-EGL-dependency.patch"
-
-VIRTUAL-RUNTIME_bash ?= "bash"
-RDEPENDS_${PN}_append_class-target = " ${VIRTUAL-RUNTIME_bash}"
-RDEPENDS_${PN}_remove = "bash"
 
 PROVIDES = "virtual/libomxil"

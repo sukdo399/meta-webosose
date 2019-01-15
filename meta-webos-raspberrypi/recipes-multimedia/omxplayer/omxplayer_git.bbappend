@@ -1,6 +1,6 @@
-# Copyright (c) 2017 LG Electronics, Inc.
+# Copyright (c) 2017-2019 LG Electronics, Inc.
 
-EXTENDPRAUTO_append = "webosrpi6"
+EXTENDPRAUTO_append = "webosrpi7"
 
 COMPATIBLE_MACHINE ?= "null"
 COMPATIBLE_MACHINE_rpi_aarch64 = "null"
@@ -13,6 +13,3 @@ SRCREV_FORMAT = "main_ffmpeg"
 
 SRC_URI += "git://source.ffmpeg.org/ffmpeg;branch=release/3.1;name=ffmpeg;destsuffix=git/ffmpeg"
 
-VIRTUAL-RUNTIME_bash ?= "bash"
-RDEPENDS_${PN}_append_class-target = " ${VIRTUAL-RUNTIME_bash}"
-RDEPENDS_${PN}_remove = "bash"

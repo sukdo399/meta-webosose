@@ -1,4 +1,4 @@
-# Copyright (c) 2012-2017 LG Electronics, Inc.
+# Copyright (c) 2012-2019 LG Electronics, Inc.
 
 PKGV .= "-0webos3"
 EXTENDPRAUTO_append = "webos10"
@@ -13,4 +13,3 @@ SRC_URI += "file://check_for_null_before_passing_to_fputs-webos.patch"
 SRC_URI += "file://defconfig"
 
 RPROVIDES_${PN} += "stat"
-RPROVIDES_${PN} += "bash /bin/bash"
